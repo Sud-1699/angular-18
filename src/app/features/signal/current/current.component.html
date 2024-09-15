@@ -1,0 +1,12 @@
+<div class="flex-box">
+    <h3>Non Signal Example</h3>
+
+    <p>Search Hero: {{search}}</p>
+
+    <input type="text" (input)="setSearchHero($event)">
+    <ul>
+        <li *ngFor="let hero of filteredHeroes">{{hero.name}}</li>
+    </ul>
+
+    <button (click)="addHero()">Add Hero</button>
+</div>

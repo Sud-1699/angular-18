@@ -1,0 +1,14 @@
+<div class="flex-box">
+    <h3>Signal Example</h3>
+    
+    <p>Search Hero: {{_search()}}</p>
+    
+    <input type="text" (input)="setSearchHero($event)">
+    <ul>
+        @for (hero of filteredHeroes(); track hero.id) {
+            <li>{{hero.name}}</li>
+        }
+    </ul>
+    
+    <button (click)="addHero()">Add Hero</button>
+</div>
